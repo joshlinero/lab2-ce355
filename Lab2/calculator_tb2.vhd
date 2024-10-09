@@ -10,18 +10,37 @@ end entity;
 
 architecture calculator_test2 of calculator_tb2 is
     -- Signal declarations (remain in the architecture declaration area)
-    signal DIN1      : std_logic_vector(DIN1_WIDTH - 1 downto 0);
-    signal DIN2      : std_logic_vector(DIN2_WIDTH - 1 downto 0);
-    signal operation : std_logic_vector(OP_WIDTH - 1 downto 0);
-    signal DOUT      : std_logic_vector(DOUT_WIDTH - 1 downto 0);
-    signal sign      : std_logic;
+    signal tDIN1      : std_logic_vector(DIN1_WIDTH - 1 downto 0);
+    signal tDIN2      : std_logic_vector(DIN2_WIDTH - 1 downto 0);
+    signal toperation : std_logic_vector(OP_WIDTH - 1 downto 0);
+    signal tDOUT      : std_logic_vector(DOUT_WIDTH - 1 downto 0);
+    signal tsign      : std_logic;
 
     -- File handling declaration
-    file infile : text open read_mode is "cal8.in";
-    file outfile : text open write_mode is "cal8.out";
+    file infile : text open read_mode is "cal16.in";
+    file outfile : text open write_mode is "cal16.out";
+	 
+	 component calculator is
+		port(
+		  DIN1      : in std_logic_vector(DIN1_WIDTH - 1 downto 0);
+        DIN2      : in std_logic_vector(DIN2_WIDTH - 1 downto 0);
+        operation : in std_logic_vector(OP_WIDTH - 1 downto 0);
+        DOUT      : out std_logic_vector(DOUT_WIDTH - 1 downto 0);
+        sign      : out std_logic
+		);
+	 end component calculator;
 
 begin
     -- Test process (variables must be declared here)
+	 dut : calculator
+		port map(
+			DIN1 => tDIN1,
+			DIN2 => tDIN2,
+			operation => toperation,
+			DOUT => tDOUT,
+			sign => tsign
+	 );
+	 
     process
         -- Variable declarations (inside the process block)
         variable my_line : line;
@@ -59,31 +78,33 @@ begin
 				 writeline(outfile, my_line);
 			
 				 -- Apply values to the calculator inputs
-				 DIN1 <= std_logic_vector(to_signed(input_din1, DIN1_WIDTH));
-				 DIN2 <= std_logic_vector(to_signed(input_din2, DIN2_WIDTH));
+				 tDIN1 <= std_logic_vector(to_signed(input_din1, DIN1_WIDTH));
+				 tDIN2 <= std_logic_vector(to_signed(input_din2, DIN2_WIDTH));
 			
 				 -- Map the character operation to the corresponding binary code
 				 if input_operation = '+' then
-					  operation <= "00";  -- Addition
+					  toperation <= "00";  -- Addition
 				 elsif input_operation = '-' then
-					  operation <= "01";  -- Subtraction
+					  toperation <= "01";  -- Subtraction
 				 elsif input_operation = '*' then
-					  operation <= "10";  -- Multiplication
+					  toperation <= "10";  -- Multiplication
 				 else
-					  operation <= "11";  -- Default or invalid operation
+					  toperation <= "11";  -- Default or invalid operation
 				 end if;
+				 
+				 
 			
 				 -- Wait for the operation to complete (simulate clock delay)
 				 wait for 10 ns;
 			
 				 -- Convert output to integer for writing to the output file
-				 output_result := to_integer(signed(DOUT));
+				 output_result := to_integer(signed(tDOUT));
 			
 				 -- Determine the sign of the output based on the sign signal
-				 if sign = '1' then 
-					  output_sign := "+";  
-				 else 
+				 if tsign = '1' then 
 					  output_sign := "-";  
+				 else 
+					  output_sign := "+";  
 				 end if;
 			
 				 -- Write the results to the output file

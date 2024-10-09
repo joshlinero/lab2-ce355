@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY calculator
+set_global_assignment -name TOP_LEVEL_ENTITY display_calc
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 23.1STD.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:44:41  OCTOBER 07, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.1 Standard Edition"
@@ -48,16 +48,54 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
-set_global_assignment -name VHDL_FILE ../Lab1/leddecoder.vhd
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name VHDL_FILE decoder.vhd
-set_global_assignment -name VHDL_FILE display_calc.vhd
-set_global_assignment -name VHDL_FILE calc_const.vhd
-set_global_assignment -name VHDL_FILE calculator.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VHDL_FILE calculator_tb.vhd
+set_location_assignment PIN_AB28 -to DIN1[0]
+set_location_assignment PIN_AC28 -to DIN1[1]
+set_location_assignment PIN_AC27 -to DIN1[2]
+set_location_assignment PIN_AD27 -to DIN1[3]
+set_location_assignment PIN_AB27 -to DIN1[4]
+set_location_assignment PIN_AC26 -to DIN1[5]
+set_location_assignment PIN_AD26 -to DIN1[6]
+set_location_assignment PIN_AB26 -to DIN1[7]
+set_location_assignment PIN_AB25 -to DIN2[0]
+set_location_assignment PIN_AC24 -to DIN2[1]
+set_location_assignment PIN_AB24 -to DIN2[2]
+set_location_assignment PIN_AB23 -to DIN2[3]
+set_location_assignment PIN_Y24 -to operation[0]
+set_location_assignment PIN_Y23 -to operation[1]
+set_location_assignment PIN_G18 -to output_display[0]
+set_location_assignment PIN_F22 -to output_display[1]
+set_location_assignment PIN_E17 -to output_display[2]
+set_location_assignment PIN_L26 -to output_display[3]
+set_location_assignment PIN_L25 -to output_display[4]
+set_location_assignment PIN_J22 -to output_display[5]
+set_location_assignment PIN_H22 -to output_display[6]
+set_location_assignment PIN_M24 -to output_display[7]
+set_location_assignment PIN_Y22 -to output_display[8]
+set_location_assignment PIN_W21 -to output_display[9]
+set_location_assignment PIN_W22 -to output_display[10]
+set_location_assignment PIN_W25 -to output_display[11]
+set_location_assignment PIN_U23 -to output_display[12]
+set_location_assignment PIN_U24 -to output_display[13]
+set_location_assignment PIN_AA25 -to output_display[14]
+set_location_assignment PIN_AA26 -to output_display[15]
+set_location_assignment PIN_Y25 -to output_display[16]
+set_location_assignment PIN_W26 -to output_display[17]
+set_location_assignment PIN_Y26 -to output_display[18]
+set_location_assignment PIN_W27 -to output_display[19]
+set_location_assignment PIN_W28 -to output_display[20]
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_global_assignment -name VHDL_FILE decoder.vhd
+set_global_assignment -name VHDL_FILE calc_const.vhd
+set_global_assignment -name VHDL_FILE ../../Lab1/leddecoder.vhd
+set_global_assignment -name VHDL_FILE display_calc.vhd
 set_global_assignment -name VHDL_FILE calculator_tb2.vhd
+set_global_assignment -name VHDL_FILE calculator_tb.vhd
+set_global_assignment -name VHDL_FILE calculator.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

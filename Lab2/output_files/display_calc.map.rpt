@@ -1,5 +1,5 @@
 Analysis & Synthesis report for display_calc
-Wed Oct  9 15:41:44 2024
+Wed Oct  9 18:51:51 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
 
 
@@ -15,11 +15,12 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
+ 10. Parameter Settings for Inferred Entity Instance: calculator:dut|lpm_mult:Mult0
  11. lpm_mult Parameter Settings by Entity Instance
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+ 12. Port Connectivity Checks: "calculator:dut"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -46,16 +47,16 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct  9 15:41:44 2024              ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct  9 18:51:51 2024              ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Standard Edition ;
 ; Revision Name                      ; display_calc                                       ;
-; Top-level Entity Name              ; calculator                                         ;
+; Top-level Entity Name              ; display_calc                                       ;
 ; Family                             ; Cyclone IV E                                       ;
-; Total logic elements               ; 114                                                ;
-;     Total combinational functions  ; 114                                                ;
+; Total logic elements               ; 135                                                ;
+;     Total combinational functions  ; 135                                                ;
 ;     Dedicated logic registers      ; 0                                                  ;
 ; Total registers                    ; 0                                                  ;
-; Total pins                         ; 27                                                 ;
+; Total pins                         ; 35                                                 ;
 ; Total virtual pins                 ; 0                                                  ;
 ; Total memory bits                  ; 0                                                  ;
 ; Embedded Multiplier 9-bit elements ; 0                                                  ;
@@ -69,9 +70,10 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; calculator         ; display_calc       ;
+; Top-level entity name                                            ; display_calc       ; display_calc       ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
-; Use smart compilation                                            ; Off                ; Off                ;
+; Use smart compilation                                            ; On                 ; Off                ;
+; Maximum processors allowed for parallel compilation              ; All                ;                    ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                      ; Off                ; Off                ;
 ; Restructure Multiplexers                                         ; Auto               ; Auto               ;
@@ -165,22 +167,24 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                    ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------+---------+
-; decoder.vhd                      ; yes             ; User VHDL File               ; C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/decoder.vhd     ;         ;
-; calc_const.vhd                   ; yes             ; User VHDL File               ; C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calc_const.vhd  ;         ;
-; calculator.vhd                   ; yes             ; User VHDL File               ; C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator.vhd  ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/lpm_mult.tdf                               ;         ;
-; aglobal231.inc                   ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/aglobal231.inc                             ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/lpm_add_sub.inc                            ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/multcore.inc                               ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/bypassff.inc                               ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/altshift.inc                               ;         ;
-; db/mult_v2t.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/db/mult_v2t.tdf ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; decoder.vhd                      ; yes             ; User VHDL File               ; C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/decoder.vhd      ;         ;
+; calc_const.vhd                   ; yes             ; User VHDL File               ; C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calc_const.vhd   ;         ;
+; ../../Lab1/leddecoder.vhd        ; yes             ; User VHDL File               ; C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab1/leddecoder.vhd              ;         ;
+; display_calc.vhd                 ; yes             ; User VHDL File               ; C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/display_calc.vhd ;         ;
+; calculator.vhd                   ; yes             ; User VHDL File               ; C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator.vhd   ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/lpm_mult.tdf                                           ;         ;
+; aglobal231.inc                   ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/aglobal231.inc                                         ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/lpm_add_sub.inc                                        ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/multcore.inc                                           ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/bypassff.inc                                           ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/altshift.inc                                           ;         ;
+; db/mult_v2t.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/db/mult_v2t.tdf  ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------+
@@ -188,42 +192,46 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 114           ;
+; Estimated Total logic elements              ; 135           ;
 ;                                             ;               ;
-; Total combinational functions               ; 114           ;
+; Total combinational functions               ; 135           ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 46            ;
+;     -- 4 input functions                    ; 67            ;
 ;     -- 3 input functions                    ; 52            ;
 ;     -- <=2 input functions                  ; 16            ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 68            ;
+;     -- normal mode                          ; 89            ;
 ;     -- arithmetic mode                      ; 46            ;
 ;                                             ;               ;
 ; Total registers                             ; 0             ;
 ;     -- Dedicated logic registers            ; 0             ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
-; I/O pins                                    ; 27            ;
+; I/O pins                                    ; 35            ;
 ;                                             ;               ;
 ; Embedded Multiplier 9-bit elements          ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; DIN2[3]~input ;
 ; Maximum fan-out                             ; 31            ;
-; Total fan-out                               ; 405           ;
-; Average fan-out                             ; 2.41          ;
+; Total fan-out                               ; 505           ;
+; Average fan-out                             ; 2.46          ;
 +---------------------------------------------+---------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                          ;
-+---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                ; Entity Name ; Library Name ;
-+---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+-------------+--------------+
-; |calculator                     ; 114 (65)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 27   ; 0            ; |calculator                                        ; calculator  ; work         ;
-;    |lpm_mult:Mult0|             ; 49 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculator|lpm_mult:Mult0                         ; lpm_mult    ; work         ;
-;       |mult_v2t:auto_generated| ; 49 (49)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculator|lpm_mult:Mult0|mult_v2t:auto_generated ; mult_v2t    ; work         ;
-+---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+-------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                               ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                 ; Entity Name  ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+--------------+--------------+
+; |display_calc                      ; 135 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |display_calc                                                       ; display_calc ; work         ;
+;    |calculator:dut|                ; 114 (65)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_calc|calculator:dut                                        ; calculator   ; work         ;
+;       |lpm_mult:Mult0|             ; 49 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_calc|calculator:dut|lpm_mult:Mult0                         ; lpm_mult     ; work         ;
+;          |mult_v2t:auto_generated| ; 49 (49)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_calc|calculator:dut|lpm_mult:Mult0|mult_v2t:auto_generated ; mult_v2t     ; work         ;
+;    |leddecoder:\g1:0:nth_display|  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_calc|leddecoder:\g1:0:nth_display                          ; leddecoder   ; work         ;
+;    |leddecoder:\g1:1:nth_display|  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_calc|leddecoder:\g1:1:nth_display                          ; leddecoder   ; work         ;
+;    |leddecoder:\g1:2:nth_display|  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_calc|leddecoder:\g1:2:nth_display                          ; leddecoder   ; work         ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -242,18 +250,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |calculator|Mux0           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |calculator|Mux11          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |display_calc|calculator:dut|Mux3 ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |display_calc|calculator:dut|Mux6 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
 
 
 +-------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                     ;
+; Parameter Settings for Inferred Entity Instance: calculator:dut|lpm_mult:Mult0      ;
 +------------------------------------------------+--------------+---------------------+
 ; Parameter Name                                 ; Value        ; Type                ;
 +------------------------------------------------+--------------+---------------------+
@@ -287,24 +295,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance         ;
-+---------------------------------------+----------------+
-; Name                                  ; Value          ;
-+---------------------------------------+----------------+
-; Number of entity instances            ; 1              ;
-; Entity Instance                       ; lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 8              ;
-;     -- LPM_WIDTHB                     ; 4              ;
-;     -- LPM_WIDTHP                     ; 12             ;
-;     -- LPM_REPRESENTATION             ; SIGNED         ;
-;     -- INPUT_A_IS_CONSTANT            ; NO             ;
-;     -- INPUT_B_IS_CONSTANT            ; NO             ;
-;     -- USE_EAB                        ; OFF            ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
-+---------------------------------------+----------------+
++-----------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                        ;
++---------------------------------------+-------------------------------+
+; Name                                  ; Value                         ;
++---------------------------------------+-------------------------------+
+; Number of entity instances            ; 1                             ;
+; Entity Instance                       ; calculator:dut|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 8                             ;
+;     -- LPM_WIDTHB                     ; 4                             ;
+;     -- LPM_WIDTHP                     ; 12                            ;
+;     -- LPM_REPRESENTATION             ; SIGNED                        ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                            ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                            ;
+;     -- USE_EAB                        ; OFF                           ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                          ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                            ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                            ;
++---------------------------------------+-------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "calculator:dut"                                                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; sign ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -312,20 +329,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 27                          ;
-; cycloneiii_lcell_comb ; 114                         ;
+; boundary_port         ; 35                          ;
+; cycloneiii_lcell_comb ; 137                         ;
 ;     arith             ; 46                          ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 7                           ;
 ;         3 data inputs ; 38                          ;
-;     normal            ; 68                          ;
+;     normal            ; 91                          ;
 ;         0 data inputs ; 3                           ;
+;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 5                           ;
 ;         3 data inputs ; 14                          ;
-;         4 data inputs ; 46                          ;
+;         4 data inputs ; 67                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 7.29                        ;
+; Max LUT depth         ; 9.60                        ;
+; Average LUT depth     ; 8.85                        ;
 +-----------------------+-----------------------------+
 
 
@@ -344,37 +362,39 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
-    Info: Processing started: Wed Oct  9 15:41:36 2024
+    Info: Processing started: Wed Oct  9 18:51:42 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off display_calc -c display_calc
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 0 entities, in source file decoder.vhd
+    Info (12022): Found design unit 1: decoder File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/decoder.vhd Line: 4
+    Info (12022): Found design unit 2: decoder-body File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/decoder.vhd Line: 16
+Info (12021): Found 2 design units, including 0 entities, in source file calc_const.vhd
+    Info (12022): Found design unit 1: calc_const File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calc_const.vhd Line: 5
+    Info (12022): Found design unit 2: calc_const-body File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calc_const.vhd Line: 16
 Info (12021): Found 2 design units, including 1 entities, in source file /users/joshu/onedrive/documents/masters-northwestern/masters_fall/ce-355/lab1/leddecoder.vhd
     Info (12022): Found design unit 1: leddecoder-data_flow File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab1/leddecoder.vhd Line: 14
     Info (12023): Found entity 1: leddecoder File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab1/leddecoder.vhd Line: 6
-Info (12021): Found 2 design units, including 0 entities, in source file decoder.vhd
-    Info (12022): Found design unit 1: decoder File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/decoder.vhd Line: 4
-    Info (12022): Found design unit 2: decoder-body File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/decoder.vhd Line: 16
 Info (12021): Found 2 design units, including 1 entities, in source file display_calc.vhd
-    Info (12022): Found design unit 1: display_calc-structural File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/display_calc.vhd Line: 13
-    Info (12023): Found entity 1: display_calc File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/display_calc.vhd Line: 5
-Info (12021): Found 2 design units, including 0 entities, in source file calc_const.vhd
-    Info (12022): Found design unit 1: calc_const File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calc_const.vhd Line: 5
-    Info (12022): Found design unit 2: calc_const-body File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calc_const.vhd Line: 16
-Info (12021): Found 2 design units, including 1 entities, in source file calculator.vhd
-    Info (12022): Found design unit 1: calculator-behavioral File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator.vhd Line: 24
-    Info (12023): Found entity 1: calculator File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file calculator_tb.vhd
-    Info (12022): Found design unit 1: calculator_tb-calculator_test File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator_tb.vhd Line: 11
-    Info (12023): Found entity 1: calculator_tb File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator_tb.vhd Line: 8
+    Info (12022): Found design unit 1: display_calc-structural File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/display_calc.vhd Line: 15
+    Info (12023): Found entity 1: display_calc File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/display_calc.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file calculator_tb2.vhd
-    Info (12022): Found design unit 1: calculator_tb2-calculator_test2 File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator_tb2.vhd Line: 11
-    Info (12023): Found entity 1: calculator_tb2 File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator_tb2.vhd Line: 8
-Info (12127): Elaborating entity "calculator" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at calculator.vhd(49): signal "sign_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator.vhd Line: 49
+    Info (12022): Found design unit 1: calculator_tb2-calculator_test2 File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator_tb2.vhd Line: 11
+    Info (12023): Found entity 1: calculator_tb2 File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator_tb2.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file calculator_tb.vhd
+    Info (12022): Found design unit 1: calculator_tb-calculator_test File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator_tb.vhd Line: 11
+    Info (12023): Found entity 1: calculator_tb File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator_tb.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file calculator.vhd
+    Info (12022): Found design unit 1: calculator-behavioral File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator.vhd Line: 24
+    Info (12023): Found entity 1: calculator File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator.vhd Line: 9
+Info (12127): Elaborating entity "display_calc" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at display_calc.vhd(22): object "tsign" assigned a value but never read File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/display_calc.vhd Line: 22
+Info (12128): Elaborating entity "calculator" for hierarchy "calculator:dut" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/display_calc.vhd Line: 47
+Warning (10492): VHDL Process Statement warning at calculator.vhd(49): signal "sign_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator.vhd Line: 49
+Info (12128): Elaborating entity "leddecoder" for hierarchy "leddecoder:\g1:0:nth_display" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/display_calc.vhd Line: 58
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator.vhd Line: 35
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator.vhd Line: 35
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator.vhd Line: 35
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "calculator:dut|Mult0" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator.vhd Line: 35
+Info (12130): Elaborated megafunction instantiation "calculator:dut|lpm_mult:Mult0" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator.vhd Line: 35
+Info (12133): Instantiated megafunction "calculator:dut|lpm_mult:Mult0" with the following parameter: File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator.vhd Line: 35
     Info (12134): Parameter "LPM_WIDTHA" = "8"
     Info (12134): Parameter "LPM_WIDTHB" = "4"
     Info (12134): Parameter "LPM_WIDTHP" = "12"
@@ -385,21 +405,21 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following para
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_v2t.tdf
-    Info (12023): Found entity 1: mult_v2t File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/db/mult_v2t.tdf Line: 29
+    Info (12023): Found entity 1: mult_v2t File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/db/mult_v2t.tdf Line: 29
 Info (13014): Ignored 52 buffer(s)
     Info (13016): Ignored 2 CARRY_SUM buffer(s)
     Info (13019): Ignored 50 SOFT buffer(s)
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 141 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 170 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
-    Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 114 logic cells
+    Info (21059): Implemented 21 output pins
+    Info (21061): Implemented 135 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4830 megabytes
-    Info: Processing ended: Wed Oct  9 15:41:44 2024
-    Info: Elapsed time: 00:00:08
+    Info: Peak virtual memory: 4821 megabytes
+    Info: Processing ended: Wed Oct  9 18:51:52 2024
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:19
 
 

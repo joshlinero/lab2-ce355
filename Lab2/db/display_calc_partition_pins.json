@@ -4,55 +4,87 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "DOUT[0]",
+					"name" : "output_display[0]",
 					"strict" : false
 				},
 				{
-					"name" : "DOUT[1]",
+					"name" : "output_display[1]",
 					"strict" : false
 				},
 				{
-					"name" : "DOUT[2]",
+					"name" : "output_display[2]",
 					"strict" : false
 				},
 				{
-					"name" : "DOUT[3]",
+					"name" : "output_display[3]",
 					"strict" : false
 				},
 				{
-					"name" : "DOUT[4]",
+					"name" : "output_display[4]",
 					"strict" : false
 				},
 				{
-					"name" : "DOUT[5]",
+					"name" : "output_display[5]",
 					"strict" : false
 				},
 				{
-					"name" : "DOUT[6]",
+					"name" : "output_display[6]",
 					"strict" : false
 				},
 				{
-					"name" : "DOUT[7]",
+					"name" : "output_display[7]",
 					"strict" : false
 				},
 				{
-					"name" : "DOUT[8]",
+					"name" : "output_display[8]",
 					"strict" : false
 				},
 				{
-					"name" : "DOUT[9]",
+					"name" : "output_display[9]",
 					"strict" : false
 				},
 				{
-					"name" : "DOUT[10]",
+					"name" : "output_display[10]",
 					"strict" : false
 				},
 				{
-					"name" : "DOUT[11]",
+					"name" : "output_display[11]",
 					"strict" : false
 				},
 				{
-					"name" : "sign",
+					"name" : "output_display[12]",
+					"strict" : false
+				},
+				{
+					"name" : "output_display[13]",
+					"strict" : false
+				},
+				{
+					"name" : "output_display[14]",
+					"strict" : false
+				},
+				{
+					"name" : "output_display[15]",
+					"strict" : false
+				},
+				{
+					"name" : "output_display[16]",
+					"strict" : false
+				},
+				{
+					"name" : "output_display[17]",
+					"strict" : false
+				},
+				{
+					"name" : "output_display[18]",
+					"strict" : false
+				},
+				{
+					"name" : "output_display[19]",
+					"strict" : false
+				},
+				{
+					"name" : "output_display[20]",
 					"strict" : false
 				},
 				{
