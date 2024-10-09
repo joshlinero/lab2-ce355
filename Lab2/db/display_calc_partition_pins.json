@@ -1,0 +1,117 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "DOUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DOUT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "sign",
+					"strict" : false
+				},
+				{
+					"name" : "DIN2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DIN1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DIN1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DIN1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DIN1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DIN1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DIN2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DIN1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DIN2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DIN1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DIN2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DIN1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "operation[0]",
+					"strict" : false
+				},
+				{
+					"name" : "operation[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
