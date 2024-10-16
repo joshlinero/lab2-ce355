@@ -49,7 +49,7 @@ begin
 		if sign_temp = '1' then
 			DOUT <= std_logic_vector(abs(result));
 		else 
-			DOUT <= std_logic_vector(result);
+			DOUT <= std_logic_vector(abs(result));
 		
 		end if;
 		

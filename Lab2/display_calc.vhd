@@ -8,7 +8,7 @@ entity display_calc is
         DIN1           : in std_logic_vector(DIN1_WIDTH - 1 downto 0);
         DIN2           : in std_logic_vector(DIN2_WIDTH - 1 downto 0);
         operation      : in std_logic_vector(OP_WIDTH - 1 downto 0);
-        output_display : out std_logic_vector(DOUT_WIDTH / 4 * 7 - 1 downto 0)
+        output_display : out std_logic_vector(DOUT_WIDTH / 4 * 7 downto 0) -- no minus one to add sign bit
     ); 
 end entity display_calc; 
 
@@ -20,6 +20,7 @@ architecture structural of display_calc is
     signal toperation : std_logic_vector(OP_WIDTH - 1 downto 0);
     signal tDOUT      : std_logic_vector(DOUT_WIDTH - 1 downto 0);
     signal tsign      : std_logic;
+    signal decoded_segments : std_logic_vector(DOUT_WIDTH / 4 * 7 downto 0);
 
     component calculator is
         port(
@@ -44,6 +45,7 @@ begin
     tDIN2 <= DIN2;
     toperation <= operation;
 
+    -- Instantiate the calculator component
     dut : calculator
         port map(
             DIN1 => tDIN1,
@@ -58,8 +60,20 @@ begin
         nth_display: leddecoder
             port map(
                 data_in => tDOUT((i + 1) * 4 - 1 downto i * 4),
-                segments_out => output_display((i + 1) * 7 - 1 downto i * 7)
+                segments_out => decoded_segments((i + 1) * 7 - 1 downto i * 7)
             );
     end generate g1;
+
+    -- Override the segment display with the negative sign if tsign is 1
+    process(tsign, decoded_segments)
+    begin
+        if tsign = '0' then
+            -- Display the negative sign on the most significant segment
+				output_display <= decoded_segments or "1000000000000000000000";
+        else
+            -- Otherwise, show the decoded segments as normal
+            output_display <= decoded_segments;
+        end if;
+    end process;
 
 end architecture structural;

@@ -1,12 +1,12 @@
 Starting the calculator test...
 Read values: DIN1=12, DIN2=4, Operation='+'
-DIN1=12, DIN2=4, Operation='+' => Result=16, Sign=+
+12+4=+16
 Read values: DIN1=12, DIN2=-4, Operation='*'
-DIN1=12, DIN2=-4, Operation='*' => Result=-48, Sign=-
+12*-4=-48
 Read values: DIN1=12, DIN2=4, Operation='-'
-DIN1=12, DIN2=4, Operation='-' => Result=8, Sign=+
+12-4=+8
 Read values: DIN1=-5, DIN2=5, Operation='+'
-DIN1=-5, DIN2=5, Operation='+' => Result=0, Sign=+
+-5+5=+0
 Read values: DIN1=0, DIN2=5, Operation='*'
-DIN1=0, DIN2=5, Operation='*' => Result=0, Sign=+
+0*5=+0
 Calculator test complete.

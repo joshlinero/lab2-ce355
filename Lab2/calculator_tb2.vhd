@@ -17,8 +17,8 @@ architecture calculator_test2 of calculator_tb2 is
     signal tsign      : std_logic;
 
     -- File handling declaration
-    file infile : text open read_mode is "cal16.in";
-    file outfile : text open write_mode is "cal16.out";
+    file infile : text open read_mode is "cal8.in";
+    file outfile : text open write_mode is "cal8.out";
 	 
 	 component calculator is
 		port(
@@ -108,11 +108,12 @@ begin
 				 end if;
 			
 				 -- Write the results to the output file
-				 write(my_line, string'("DIN1=" & integer'image(input_din1) &
-											 ", DIN2=" & integer'image(input_din2) &
-											 ", Operation=" & character'image(input_operation) &
-											 " => Result=" & integer'image(output_result) &
-											 ", Sign=" & output_sign));
+				 write(my_line, string'(integer'image(input_din1) 
+												& input_operation
+										      & integer'image(input_din2) 
+												& "=" & output_sign
+											   & integer'image(output_result)
+											   ));
 				 writeline(outfile, my_line);
 			end loop;
 

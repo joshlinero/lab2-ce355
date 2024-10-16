@@ -1,14 +1,14 @@
 Starting the calculator test...
 Read values: DIN1=122, DIN2=89, Operation='+'
-DIN1=122, DIN2=89, Operation='+' => Result=211, Sign=+
+122+89=+211
 Read values: DIN1=1234, DIN2=-10, Operation='*'
-DIN1=1234, DIN2=-10, Operation='*' => Result=-12340, Sign=-
+1234*-10=-12340
 Read values: DIN1=1356, DIN2=86, Operation='-'
-DIN1=1356, DIN2=86, Operation='-' => Result=1270, Sign=+
+1356-86=+1270
 Read values: DIN1=-120, DIN2=-40, Operation='+'
-DIN1=-120, DIN2=-40, Operation='+' => Result=-160, Sign=-
+-120+-40=-160
 Read values: DIN1=-333, DIN2=3, Operation='*'
-DIN1=-333, DIN2=3, Operation='*' => Result=-999, Sign=-
+-333*3=-999
 Read values: DIN1=10, DIN2=80, Operation='-'
-DIN1=10, DIN2=80, Operation='-' => Result=70, Sign=-
+10-80=-70
 Calculator test complete.

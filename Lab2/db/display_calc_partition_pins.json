@@ -88,6 +88,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "output_display[21]",
+					"strict" : false
+				},
+				{
 					"name" : "DIN2[3]",
 					"strict" : false
 				},

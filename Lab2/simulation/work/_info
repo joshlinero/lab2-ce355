@@ -11,26 +11,26 @@ dC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab1
 Pcalc_const
 Z0 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z1 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z2 w1728510545
+Z2 w1728679119
 Z3 dC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/simulation
 Z4 8C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calc_const.vhd
 Z5 FC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calc_const.vhd
 l0
 L5
-V]E=hNjN3jJdjA5G`FJfj21
-!s100 kPLjATQC<0T@Ndj0Xfe]^3
+V;6H_`[EF5i`KCVFNX4[ea2
+!s100 eQ0bITO@hg5<=OhAKdR[l2
 Z6 OV;C;10.5b;63
 32
-Z7 !s110 1728510606
+Z7 !s110 1728679137
 !i10b 1
-Z8 !s108 1728510606.000000
+Z8 !s108 1728679137.000000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calc_const.vhd|
 Z10 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calc_const.vhd|
 !i113 1
 Z11 o-work work -2002 -explicit
 Z12 tExplicit 1 CvgOpt 0
 Bbody
-Z13 DPx4 work 10 calc_const 0 22 ]E=hNjN3jJdjA5G`FJfj21
+Z13 DPx4 work 10 calc_const 0 22 ;6H_`[EF5i`KCVFNX4[ea2
 R0
 R1
 l0
@@ -48,7 +48,7 @@ R10
 R11
 R12
 Ecalculator
-Z14 w1728353597
+Z14 w1728678812
 Z15 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R13
 Z16 DPx4 work 7 decoder 0 22 7JFZhWHAHzGGe^n0[6MO[3
@@ -63,11 +63,11 @@ VnPj@SoJK<Yjmnd:N0?WVD0
 !s100 6jzUNGCjG9J@4k7Blk90n1
 R6
 32
-Z19 !s110 1728510607
+R7
 !i10b 1
-Z20 !s108 1728510607.000000
-Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator.vhd|
-Z22 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator.vhd|
+R8
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator.vhd|
+Z20 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator.vhd|
 !i113 1
 R11
 R12
@@ -80,67 +80,67 @@ R1
 DEx4 work 10 calculator 0 22 nPj@SoJK<Yjmnd:N0?WVD0
 l30
 L24
-VFcja<D0_Qg8D`n]8?K09F1
-!s100 kk@25UY5QZIo=d?zeNd2;1
+V3c`cgDDM@^5mE6l`lmz3h0
+!s100 XIbbRX?D4Ro4Po@iiV8WG0
 R6
 32
-R19
+R7
 !i10b 1
+R8
+R19
 R20
-R21
-R22
 !i113 1
 R11
 R12
 Ecalculator_tb
-Z23 w1728356638
+Z21 w1728356638
 R15
-Z24 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z22 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R0
 R1
-Z25 dC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/simulation
-Z26 8C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator_tb.vhd
-Z27 FC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator_tb.vhd
+Z23 dC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/simulation
+Z24 8C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator_tb.vhd
+Z25 FC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator_tb.vhd
 l0
 L8
 VYP1T`[XicQN;8]U_UOF`L0
 !s100 dhPg75cnc?ZC`446T7fC12
 R6
 32
-Z28 !s110 1728506510
+Z26 !s110 1728506510
 !i10b 1
-Z29 !s108 1728506510.000000
-Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator_tb.vhd|
-Z31 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator_tb.vhd|
+Z27 !s108 1728506510.000000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator_tb.vhd|
+Z29 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab2/calculator_tb.vhd|
 !i113 1
 R11
 R12
 Acalculator_test
 R15
-R24
+R22
 R0
 R1
-Z32 DEx4 work 13 calculator_tb 0 22 YP1T`[XicQN;8]U_UOF`L0
+Z30 DEx4 work 13 calculator_tb 0 22 YP1T`[XicQN;8]U_UOF`L0
 l16
 L11
 V3JUNgk8REm?`_gge5JM4C3
 !s100 [DGGLSBZJbQ?Y;kb[ea@?3
 R6
 32
-R28
+R26
 !i10b 1
+R27
+R28
 R29
-R30
-R31
 !i113 1
 R11
 R12
 Astandardio
 R15
-R24
+R22
 R0
 R1
-R32
+R30
 l13
 L11
 Vnn[`gbhm2LoiU0WRJFKeC0
@@ -150,30 +150,30 @@ R6
 !s110 1728356355
 !i10b 1
 !s108 1728356354.000000
-R30
-R31
+R28
+R29
 !i113 1
 R11
 R12
 w1728356327
 Ecalculator_tb2
-Z33 w1728510565
+Z31 w1728679116
 R13
 R15
 R0
 R1
 R3
-Z34 8C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator_tb2.vhd
-Z35 FC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator_tb2.vhd
+Z32 8C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator_tb2.vhd
+Z33 FC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator_tb2.vhd
 l0
 L8
 VF7E:kl:z`Keb_Hb`CnVdh0
 !s100 XC:c:?zoLlVE2YJ5g]lG13
 R6
 32
-R19
+Z34 !s110 1728679138
 !i10b 1
-R20
+Z35 !s108 1728679138.000000
 Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator_tb2.vhd|
 Z37 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator_tb2.vhd|
 !i113 1
@@ -187,13 +187,13 @@ R1
 Z38 DEx4 work 14 calculator_tb2 0 22 F7E:kl:z`Keb_Hb`CnVdh0
 l33
 L11
-VZ2]g]7PY2^cFR=CZ9f>M02
-!s100 B;;7UXW@6IMQJ[K<8N86U2
+VGci9;Q0nH;klhIegUSN>h2
+!s100 j7^Z0[b5c7?LgYSSZ0b173
 R6
 32
-R19
+R34
 !i10b 1
-R20
+R35
 R36
 R37
 !i113 1
@@ -239,46 +239,50 @@ R43
 R11
 R12
 Edisplay_calc
-Z44 w1728341919
+Z44 w1728525672
+R13
+R16
 R0
 R1
 R3
 Z45 8C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/display_calc.vhd
 Z46 FC:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/display_calc.vhd
 l0
-L5
-V>P^db3Ncc4HCz5fld99cl1
-!s100 zBbDTe=G2YFO1o?D=k^YL3
+L6
+VE8@_[19PeZF?X4A`UP3F23
+!s100 l:eoU8m;<f574<cg4]:XG2
 R6
 32
-R19
+R7
 !i10b 1
-R20
+R8
 Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/display_calc.vhd|
 Z48 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/display_calc.vhd|
 !i113 1
 R11
 R12
 Astructural
+R13
+R16
 R0
 R1
-DEx4 work 12 display_calc 0 22 >P^db3Ncc4HCz5fld99cl1
-l16
-L13
-VcF]ODzQDjKF8bSH4QS=zI0
-!s100 BzZc;EomHV12n=CZFWAHM3
+DEx4 work 12 display_calc 0 22 E8@_[19PeZF?X4A`UP3F23
+l42
+L15
+VKz7RBPSCk8fmDD0lehjBh0
+!s100 gZ7TZEREXkd528a<kdM8<2
 R6
 32
-R19
+R7
 !i10b 1
-R20
+R8
 R47
 R48
 !i113 1
 R11
 R12
 Eleddecoder
-Z49 w1727912112
+Z49 w1728524982
 R0
 R1
 R3
@@ -290,9 +294,9 @@ V2zl@@5`FIhLjD5b2foCce0
 !s100 1b:VT84cO=<P]OYT:[U@L0
 R6
 32
-R19
+R7
 !i10b 1
-R20
+R8
 Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab1/leddecoder.vhd|
 Z53 !s107 C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/Lab1/leddecoder.vhd|
 !i113 1
@@ -308,9 +312,9 @@ V8<86f>=:NA[`nXSdfg9[o0
 !s100 nhWTAh=f^oT[Y>[6X0Tbn2
 R6
 32
-R19
+R7
 !i10b 1
-R20
+R8
 R52
 R53
 !i113 1

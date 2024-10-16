@@ -1,5 +1,5 @@
 Analysis & Synthesis report for display_calc
-Wed Oct  9 18:51:51 2024
+Fri Oct 11 15:38:55 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
 
 
@@ -17,10 +17,9 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
  10. Parameter Settings for Inferred Entity Instance: calculator:dut|lpm_mult:Mult0
  11. lpm_mult Parameter Settings by Entity Instance
- 12. Port Connectivity Checks: "calculator:dut"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -47,16 +46,16 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct  9 18:51:51 2024              ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 11 15:38:55 2024              ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Standard Edition ;
 ; Revision Name                      ; display_calc                                       ;
 ; Top-level Entity Name              ; display_calc                                       ;
 ; Family                             ; Cyclone IV E                                       ;
-; Total logic elements               ; 135                                                ;
-;     Total combinational functions  ; 135                                                ;
+; Total logic elements               ; 123                                                ;
+;     Total combinational functions  ; 123                                                ;
 ;     Dedicated logic registers      ; 0                                                  ;
 ; Total registers                    ; 0                                                  ;
-; Total pins                         ; 35                                                 ;
+; Total pins                         ; 36                                                 ;
 ; Total virtual pins                 ; 0                                                  ;
 ; Total memory bits                  ; 0                                                  ;
 ; Embedded Multiplier 9-bit elements ; 0                                                  ;
@@ -192,30 +191,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 135           ;
+; Estimated Total logic elements              ; 123           ;
 ;                                             ;               ;
-; Total combinational functions               ; 135           ;
+; Total combinational functions               ; 123           ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 67            ;
-;     -- 3 input functions                    ; 52            ;
-;     -- <=2 input functions                  ; 16            ;
+;     -- 4 input functions                    ; 63            ;
+;     -- 3 input functions                    ; 45            ;
+;     -- <=2 input functions                  ; 15            ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 89            ;
+;     -- normal mode                          ; 77            ;
 ;     -- arithmetic mode                      ; 46            ;
 ;                                             ;               ;
 ; Total registers                             ; 0             ;
 ;     -- Dedicated logic registers            ; 0             ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
-; I/O pins                                    ; 35            ;
+; I/O pins                                    ; 36            ;
 ;                                             ;               ;
 ; Embedded Multiplier 9-bit elements          ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; DIN2[3]~input ;
 ; Maximum fan-out                             ; 31            ;
-; Total fan-out                               ; 505           ;
-; Average fan-out                             ; 2.46          ;
+; Total fan-out                               ; 468           ;
+; Average fan-out                             ; 2.40          ;
 +---------------------------------------------+---------------+
 
 
@@ -224,8 +223,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+--------------+--------------+
 ; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                 ; Entity Name  ; Library Name ;
 +------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------+--------------+--------------+
-; |display_calc                      ; 135 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |display_calc                                                       ; display_calc ; work         ;
-;    |calculator:dut|                ; 114 (65)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_calc|calculator:dut                                        ; calculator   ; work         ;
+; |display_calc                      ; 123 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |display_calc                                                       ; display_calc ; work         ;
+;    |calculator:dut|                ; 102 (53)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_calc|calculator:dut                                        ; calculator   ; work         ;
 ;       |lpm_mult:Mult0|             ; 49 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_calc|calculator:dut|lpm_mult:Mult0                         ; lpm_mult     ; work         ;
 ;          |mult_v2t:auto_generated| ; 49 (49)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_calc|calculator:dut|lpm_mult:Mult0|mult_v2t:auto_generated ; mult_v2t     ; work         ;
 ;    |leddecoder:\g1:0:nth_display|  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |display_calc|leddecoder:\g1:0:nth_display                          ; leddecoder   ; work         ;
@@ -255,8 +254,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |display_calc|calculator:dut|Mux3 ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |display_calc|calculator:dut|Mux6 ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |display_calc|calculator:dut|Mux2 ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |display_calc|calculator:dut|Mux7 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
 
 
@@ -315,35 +314,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+-------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "calculator:dut"                                                                     ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; sign ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 35                          ;
-; cycloneiii_lcell_comb ; 137                         ;
+; boundary_port         ; 36                          ;
+; cycloneiii_lcell_comb ; 126                         ;
 ;     arith             ; 46                          ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 7                           ;
 ;         3 data inputs ; 38                          ;
-;     normal            ; 91                          ;
+;     normal            ; 80                          ;
 ;         0 data inputs ; 3                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 14                          ;
-;         4 data inputs ; 67                          ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 63                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.60                        ;
-; Average LUT depth     ; 8.85                        ;
+; Max LUT depth         ; 8.60                        ;
+; Average LUT depth     ; 7.83                        ;
 +-----------------------+-----------------------------+
 
 
@@ -352,7 +342,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -362,7 +352,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Standard Edition
-    Info: Processing started: Wed Oct  9 18:51:42 2024
+    Info: Processing started: Fri Oct 11 15:38:40 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off display_calc -c display_calc
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 0 entities, in source file decoder.vhd
@@ -387,10 +377,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file calcula
     Info (12022): Found design unit 1: calculator-behavioral File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator.vhd Line: 24
     Info (12023): Found entity 1: calculator File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator.vhd Line: 9
 Info (12127): Elaborating entity "display_calc" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at display_calc.vhd(22): object "tsign" assigned a value but never read File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/display_calc.vhd Line: 22
-Info (12128): Elaborating entity "calculator" for hierarchy "calculator:dut" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/display_calc.vhd Line: 47
+Warning (10873): Using initial value X (don't care) for net "decoded_segments[21]" at display_calc.vhd(23) File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/display_calc.vhd Line: 23
+Info (12128): Elaborating entity "calculator" for hierarchy "calculator:dut" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/display_calc.vhd Line: 49
 Warning (10492): VHDL Process Statement warning at calculator.vhd(49): signal "sign_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator.vhd Line: 49
-Info (12128): Elaborating entity "leddecoder" for hierarchy "leddecoder:\g1:0:nth_display" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/display_calc.vhd Line: 58
+Info (12128): Elaborating entity "leddecoder" for hierarchy "leddecoder:\g1:0:nth_display" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/display_calc.vhd Line: 60
 Info (278001): Inferred 1 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "calculator:dut|Mult0" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator.vhd Line: 35
 Info (12130): Elaborated megafunction instantiation "calculator:dut|lpm_mult:Mult0" File: C:/Users/joshu/OneDrive/Documents/Masters-Northwestern/Masters_Fall/CE-355/lab2-ce355/Lab2/calculator.vhd Line: 35
@@ -412,14 +402,14 @@ Info (13014): Ignored 52 buffer(s)
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 170 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 159 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
-    Info (21059): Implemented 21 output pins
-    Info (21061): Implemented 135 logic cells
+    Info (21059): Implemented 22 output pins
+    Info (21061): Implemented 123 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4821 megabytes
-    Info: Processing ended: Wed Oct  9 18:51:52 2024
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 4809 megabytes
+    Info: Processing ended: Fri Oct 11 15:38:55 2024
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:34
 
 
